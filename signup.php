@@ -1,13 +1,13 @@
-<?php
-require('actions/signupAction.php');?>
+<?php require('actions/signupAction.php');?>
+
 <!DOCTYPE html>
-<html lang="en">
-<?php include 'includes/head.php' ?>
+<html lang="fr">
+<?php include 'includes/head.php';?>
 <body>
-<br><br>
 <form class="container" method="POST">
-    <?php
-        if(isset($php_errorMsg)){ echo '<p>'.$errorMsg.'</p>' ;?>
+
+<?php if(isset($errorMsg)){ echo '<p>'.$errorMsg.'</p>';} ?>
+<br><br>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nom d'utilisateur</label>
     <input type="text" class="form-control" name="pseudo">
@@ -22,7 +22,7 @@ require('actions/signupAction.php');?>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-    <input type="password" class="form-control" name="password">
+    <input type="password" class="form-control" name="mdp">
   </div>
   <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
 </form>
